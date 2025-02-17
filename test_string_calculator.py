@@ -18,7 +18,12 @@ class TestStringCalculator(unittest.TestCase):
         calculator = StringCalculator()
         self.assertEqual(calculator.Add("1,2,3,4,5"), 15)
 
+    def test_new_line_delimiter_returns_sum(self):
+        calculator = StringCalculator()
+        self.assertEqual(calculator.Add("1\n2,3"), 6)
+
 if __name__ == '__main__':
+
 
 
 
