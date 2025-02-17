@@ -14,7 +14,12 @@ class TestStringCalculator(unittest.TestCase):
         calculator = StringCalculator()
         self.assertEqual(calculator.Add("1,2"), 3)
 
+    def test_multiple_numbers_returns_sum(self):
+        calculator = StringCalculator()
+        self.assertEqual(calculator.Add("1,2,3,4,5"), 15)
+
 if __name__ == '__main__':
+
 
 
     unittest.main()
