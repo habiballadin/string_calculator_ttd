@@ -22,9 +22,10 @@ class TestStringCalculator(unittest.TestCase):
         calculator = StringCalculator()
         self.assertEqual(calculator.Add("1\n2,3"), 6)
 
+    def test_custom_delimiter_returns_sum(self):
+        calculator = StringCalculator()
+        self.assertEqual(calculator.Add("//;\n1;2"), 3)
+
 if __name__ == '__main__':
-
-
-
 
     unittest.main()
