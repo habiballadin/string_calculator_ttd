@@ -14,8 +14,12 @@ class StringCalculator:
         numbers = numbers.replace('\n', delimiter)
         num_list = [int(num) for num in numbers.split(delimiter)]
         
+        # Filter out numbers greater than 1000
+        num_list = [num for num in num_list if num <= 1000]
+        
         # Check for negative numbers
         negatives = [num for num in num_list if num < 0]
+
         if negatives:
             raise Exception(f"negatives not allowed: {', '.join(map(str, negatives))}")
             

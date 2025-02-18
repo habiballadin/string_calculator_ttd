@@ -32,7 +32,12 @@ class TestStringCalculator(unittest.TestCase):
             calculator.Add("1,-2,3")
         self.assertEqual(str(context.exception), "negatives not allowed: -2")
 
+    def test_numbers_greater_than_1000_are_ignored(self):
+        calculator = StringCalculator()
+        self.assertEqual(calculator.Add("2,1001"), 2)
+
 if __name__ == '__main__':
+
 
 
     unittest.main()
