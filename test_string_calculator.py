@@ -44,10 +44,10 @@ class TestStringCalculator(unittest.TestCase):
         calculator = StringCalculator()
         self.assertEqual(calculator.Add("//[***][%%]\n1***2%%3"), 6)
 
+    def test_multiple_delimiters_with_varying_lengths(self):
+        calculator = StringCalculator()
+        self.assertEqual(calculator.Add("//[**][%%][$$$]\n1**2%%3$$$4"), 10)
+
 if __name__ == '__main__':
-
-
-
-
 
     unittest.main()
