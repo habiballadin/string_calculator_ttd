@@ -1,5 +1,11 @@
+# Developed using TDD principles:
+# 1. Red: Write failing test first
+# 2. Green: Write minimal code to pass test
+# 3. Refactor: Improve code while keeping tests passing
+
 class StringCalculator:
     def Add(self, numbers):
+
         if not numbers:
             return 0
             

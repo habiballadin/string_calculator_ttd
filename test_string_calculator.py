@@ -1,7 +1,13 @@
 import unittest
 from string_calculator import StringCalculator
 
+# TDD Process Documentation:
+# 1. Red: Write failing test first
+# 2. Green: Write minimal code to pass test
+# 3. Refactor: Improve code while keeping tests passing
+
 class TestStringCalculator(unittest.TestCase):
+
     def test_empty_string_returns_zero(self):
         calculator = StringCalculator()
         self.assertEqual(calculator.Add(""), 0)
