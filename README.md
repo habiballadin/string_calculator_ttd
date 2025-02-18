@@ -51,9 +51,23 @@ except Exception as e:
     print(e)  # Output: negatives not allowed: -2
 ```
 
+## TDD Process
+
+The implementation strictly followed Test-Driven Development (TDD) principles:
+
+1. **Red**: Write a failing test first
+2. **Green**: Write minimal code to pass the test
+3. **Refactor**: Improve code while keeping tests passing
+
+For each feature:
+1. A test was written that initially failed
+2. Minimal implementation code was added to make the test pass
+3. Code was refactored while ensuring all tests continued to pass
+
 ## Running Tests
 
 To run all test cases:
+
 
 ```bash
 python -m unittest test_string_calculator.py
