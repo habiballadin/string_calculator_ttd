@@ -12,4 +12,11 @@ class StringCalculator:
             
         # Replace new lines with delimiter and split
         numbers = numbers.replace('\n', delimiter)
-        return sum(int(num) for num in numbers.split(delimiter))
+        num_list = [int(num) for num in numbers.split(delimiter)]
+        
+        # Check for negative numbers
+        negatives = [num for num in num_list if num < 0]
+        if negatives:
+            raise Exception(f"negatives not allowed: {', '.join(map(str, negatives))}")
+            
+        return sum(num_list)
